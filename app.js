@@ -34,6 +34,13 @@ app.get('/post-poetry', (req, res) => {
     });
 });
 
+app.get('/view-poems', (req, res) => {
+    // Render the about page template
+    res.render('view-poems', {
+        title: 'View Poems'
+    });
+});
+
 // Start the server
 app.listen(PORT, () => {
 });
