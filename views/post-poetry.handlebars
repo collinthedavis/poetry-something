@@ -10,6 +10,11 @@
 <body>
     <h1>Post a poem</h1>
     <p>This is where you can post your poetry</p>
-    <input type="text" name="textbox" id="textbox">
+    <!-- Form with text box and submit button -->
+    <form action="/submit" method="post">
+        <label for="textbox">Enter Text:</label>
+        <input type="text" id="textbox" name="textbox">
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>
