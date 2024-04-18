@@ -1,21 +1,51 @@
-<!-- views/about.handlebars -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post Poetry</title>
+    <title>Simple Form with Foundation</title>
+    <!-- Foundation CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.3/css/foundation.min.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Add your custom CSS styles here */
+    </style>
 </head>
 <body>
-    <h1>Post a poem</h1>
-    <p>This is where you can post your poetry</p>
-    <!-- Form with text box and submit button -->
-    <form action="/submit" method="post">
-        <label for="textbox">Enter Text:</label>
-        <input type="text" id="textbox" name="textbox">
-        <input type="submit" value="Submit">
-    </form>
-    <a href="/view-poems" class="btn">View poetry</a>
+
+<div class="grid-container">
+    <div class="grid-x grid-padding-x">
+        <div class="cell medium-6 medium-offset-3">
+            <h1>Post post-poetry</h1>
+            <form action="/submit" method="POST">
+                <div class="grid-x grid-padding-x">
+                    <div class="cell">
+                        <label>Author
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </label>
+                    </div>
+                    </div>
+                    <div class="cell">
+                        <label>Poem
+                            <textarea name="message" placeholder="Your Message" required></textarea>
+                        </label>
+                    </div>
+                    <div class="cell">
+                        <a href="/view-poems" class="button">Post Poem</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Foundation JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.3/js/vendor/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.3/js/vendor/what-input.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.3/js/foundation.min.js"></script>
+<script>
+    $(document).foundation();
+</script>
+
 </body>
 </html>
